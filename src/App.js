@@ -4,7 +4,7 @@ import Welcome from './Components/WelcomeMessage'
 import styled, {css} from 'styled-components'
 import AppLayout from './Components/AppLayout'
 import AppBar from './Components/AppBar'
-
+import {AppProvider} from './Components/AppProvider'
 /*
 const MyButton = styled.div`
 color: green;
@@ -29,8 +29,10 @@ class App extends Component {
   render() {
     return (
       <AppLayout>
+        <AppProvider>
         <AppBar/>
       <Welcome name={'Appazen'}/>
+      </AppProvider>
       </AppLayout>
     );
   }
