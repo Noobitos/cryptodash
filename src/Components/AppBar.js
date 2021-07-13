@@ -34,7 +34,7 @@ function ControlButton({name, active}) {
     </AppContext.Consumer>
     )
 }
-export default function() {
+export default function AppBar() {
     return <Bar> 
         <Logo> Appazen </Logo>
         <div> </div>

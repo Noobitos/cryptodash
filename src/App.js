@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Welcome from './Components/WelcomeMessage'
-import styled, {css} from 'styled-components'
-import AppLayout from './Components/AppLayout'
-import AppBar from './Components/AppBar'
-import {AppProvider} from './Components/AppProvider'
+import WelcomeMessage from './Settings/WelcomeMessage';
+import styled, {css} from 'styled-components';
+import AppLayout from './Components/AppLayout';
+import AppBar from './Components/AppBar';
+import {AppProvider} from './Components/AppProvider';
+import Settings from './Settings';
+import ConfirmButton from './Settings/ConfirmButton'
+
 /*
 const MyButton = styled.div`
 color: green;
@@ -31,7 +34,8 @@ class App extends Component {
       <AppLayout>
         <AppProvider>
         <AppBar/>
-      <Welcome name={'Appazen'}/>
+      <WelcomeMessage name={'Appazen'}/>
+      <ConfirmButton/>
       </AppProvider>
       </AppLayout>
     );
