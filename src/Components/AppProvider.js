@@ -1,6 +1,7 @@
 import React from 'react';
 
 const cc = require('cryptocompare');
+cc.setApiKey = '07f6711fa7582460e083bd7234fafb582acbecef45b4a9321787bdafb1576552';
 
 export const AppContext = React.createContext();
 
@@ -19,7 +20,7 @@ export class AppProvider extends React.Component {
     }
     fetchCoins = async () => {
         let coinList = (await cc.coinList()).Data;
-        console.log(coinList);
+        this.setState({coinList});
     }
     confirmFavorites =() => {
         this.setState({
@@ -32,7 +33,7 @@ export class AppProvider extends React.Component {
     }
 
     savedSettings() {
-        let cryptoDashData = JSON.parse(localStorage.getItem('cryptoDash'));
+        let cryptoDashData = JSON.parse(localStorage.getItem('dashboard'));
         if (!cryptoDashData) {
             return {page: 'settings', firstVisit: true}
         }

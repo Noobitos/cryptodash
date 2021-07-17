@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import WelcomeMessage from './Settings/WelcomeMessage';
 import styled, {css} from 'styled-components';
 import AppLayout from './Components/AppLayout';
 import AppBar from './Components/AppBar';
 import {AppProvider} from './Components/AppProvider';
 import Settings from './Settings';
-import ConfirmButton from './Settings/ConfirmButton'
+import Content from './Shared/Content'
 
 /*
 const MyButton = styled.div`
@@ -34,8 +33,9 @@ class App extends Component {
       <AppLayout>
         <AppProvider>
         <AppBar/>
-      <WelcomeMessage name={'Appazen'}/>
-      <ConfirmButton/>
+        <Content>
+          <Settings/>
+        </Content>
       </AppProvider>
       </AppLayout>
     );
