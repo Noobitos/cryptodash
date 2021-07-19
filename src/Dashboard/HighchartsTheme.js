@@ -11,7 +11,6 @@
           ],
           /*
           Solana colors
-
           */
 
         chart: {
